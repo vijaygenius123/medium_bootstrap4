@@ -1,30 +1,38 @@
-# Adding Header
+# Adding Overlay 
 
-To add the header add the code from below below ur navbar
+To add some text over your background using overlay. Add the line below within your header tag
 ```html
-<header class="header">
-
-</header>
+  <div class="overlay"></div>
 ```
-And the code below in your css
+And css below to add some transperancy
 ```css
-.header{
- background-image: url('../images/headerback.jpg');
- background-attachment: fixed;
- background-size: cover;
- background-position: center;
+.overlay {
+    position: absolute;
+    min-height: 100%;
+    min-width: 100%;
+    left: 0;
+    top: 0;
+    background: rgba(244, 244, 244, 0.6);
 }
 ```
 
-And also create main.js and add the following
-```js
-$(document).ready(function(){
-    $('.header').height($(window).height());
-   })
-```
+## Adding Text 
 
-Inculde your js and jquery  by adding the lines below just before the closing body tag
+Create a container within the header below the overlay in yout html document
 ```html
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script type="text/javascript" src='main.js'></script>
+ <div class="container">
+        <div class="description">
+            <h2> Bootstrap 4 Site</h2>
+            <p>Welcome To The Site</p>
+        </div>
+ </div>
+```
+And add the following in main.css
+```css
+.description {
+    position: absolute;
+    top: 30%;
+    margin: auto;
+    padding: 2em;
+}
 ```

@@ -9,3 +9,19 @@
     background-size: cover;
 	background-position: center;
    }
+
+.overlay {
+    top:0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    position: absolute;
+    background: rgba(244, 244 , 244, .7)
+}
+
+.description {
+    position: absolute;
+    top: 30%;
+    margin: auto;
+    padding: 2em;
+}
