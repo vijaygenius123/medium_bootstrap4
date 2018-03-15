@@ -2,3 +2,10 @@
 .navbar-collapse{
     justify-content: flex-end;
 }
+
+.header{
+    position: relative;
+    background-image: url('https://source.unsplash.com/random');
+    background-size: cover;
+	background-position: center;
+   }

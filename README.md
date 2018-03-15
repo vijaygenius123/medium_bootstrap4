@@ -1,58 +1,30 @@
-# Adding Navbar To Your Project
+# Adding Header
 
-    To add a basic navbar in your site use the line below. It will add an empty navbar element.
-        ```html
-        <nav class="navbar navbar-expand-lg fixed-top ">
-        </nav>
-        ```
+To add the header add the code from below below ur navbar
+```html
+<header class="header">
 
-## Adding Branding To Your Navbar
+</header>
+```
+And the code below in your css
+```css
+.header{
+ background-image: url('../images/headerback.jpg');
+ background-attachment: fixed;
+ background-size: cover;
+ background-position: center;
+}
+```
 
-    Bootstrap provides class navbar-brand which can be used to add branding. This will add an element to top left corner of your site with a link to #.
-    ```html
-           <a class="navbar-brand" href="#">My Site</a>
-    ```
-    
-## Adding Other Links On Navbar
+And also create main.js and add the following
+```js
+$(document).ready(function(){
+    $('.header').height($(window).height());
+   })
+```
 
-    1. To add other links on the Navbar. You will need to create a container for them. To do so use the div like below
-        ```html
-            <div class="navbar navbar-collapse">
-            </div>
-        ```
-
-    Also add the following css to nvabar-collapse so it will be aligned to the right.
-        ```css
-            .navbar-collapse{
-                justify-content: flex-end;
-            }
-        ```
-
-    2. Add an unordered list for adding links
-        ```html
-        <ul class="navbar-nav mr-4">
-        </ul>
-        ```
-
-    3. Add items inside the list
-
-        Add li elements with clas nav-item and hyperlink elements with class nav-link
-        ```html
-            <li class="nav-item">
-                <a class="nav-link" href="1">Link 1</a>
-            </li>
-        ```
-
-### Final Code
-        ```html
-        <nav class="navbar navbar-expand-lg fixed-top ">
-            <a class="navbar-brand" href="#">My Site</a>
-            <div class="navbar-collapse">
-                <ul class="navbar-nav mr-4">  
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">About</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-        ```
+Inculde your js and jquery  by adding the lines below just before the closing body tag
+```html
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src='main.js'></script>
+```
